@@ -37,6 +37,9 @@ import { PdfGeneratorModule } from './pdf-generator/pdf-generator.module';
         migrations: [__dirname + '/migrations/*.{js,ts}'],
         autoLoadEntities: true,
         synchronize: true,
+        ssl: {
+          rejectUnauthorized: false,
+        },
       }),
       inject: [ConfigService],
     }),
